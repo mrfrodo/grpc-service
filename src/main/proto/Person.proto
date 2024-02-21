@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package com.example.grpcservice;
+
+service PersonService {
+  rpc GetName (PersonRequest) returns (PersonResponse);
+}
+
+message PersonRequest {
+  string requestParam = 1;
+}
+
+message PersonResponse {
+  string responseData = 1;
+}
